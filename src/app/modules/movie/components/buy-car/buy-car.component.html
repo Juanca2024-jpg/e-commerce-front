@@ -1,0 +1,24 @@
+<div class="container text-center">
+    <button class="btn btn-primary floating-button" (click)="createOrder()">Crear orden</button>
+    <div class="row align-items-start card-container">
+      <div *ngFor="let product of products" class="align-items-stretch col">
+        <div class="container mt-4">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+                <div class="col h-100">
+                    <div class="card product-card h-100">
+                        <img src="https://res.cloudinary.com/dybshhtw1/image/upload/v1740285189/sin-fotografia_imq2to.png" class="card-img-top product-image" alt="Producto">
+                        <div class="card-body">
+                            <h5>{{product.name}}</h5>
+                            <p class="product-title">{{product.description}}</p>
+                            <small class="product-price">${{product.price.toFixed(3)}} COP</small>
+                            <div class="mt-auto">
+                                <button class="btn btn-danger " (click)="deleteProductByCarr(product)">Elimiar del carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

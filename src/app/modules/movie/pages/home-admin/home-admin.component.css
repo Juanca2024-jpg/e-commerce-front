@@ -1,0 +1,22 @@
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    margin-top: 65px;
+}
+.nav-bar{
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    gap: 20%;
+}
+.search{
+    width: 30%;
+}
+.container-buttons{
+    width: 50%;
+    display: flex;
+    gap: 1%;
+}

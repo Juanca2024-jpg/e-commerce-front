@@ -1,0 +1,32 @@
+<div id="root">
+    <div class= "form-control" id="container">
+        <h1>Sign Up</h1>
+        <p>Enter the following fields to register</p>
+    
+        <label for="">Name</label>
+        <div>
+            <input type="text"  [class]="validateName" (input)="ValidateN($event)" placeholder="Name" [(ngModel)]="account.name" required>
+            <div class="invalid-feedback" [hidden]="warningName">
+                This field is required
+            </div>
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="email" [class]="validateMail" (input)="ValidateM($event)" placeholder="E-mail" [(ngModel)]="account.email">
+            <div class="invalid-feedback" [hidden]="warningMail">
+                This field is required
+            </div>
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="password" [class]="validatePassword" (input)="ValidateP($event)" placeholder="ej:123456789" [(ngModel)]="account.password">
+            <div class="invalid-feedback" [hidden]="warningPassword">
+                This field is required
+            </div>
+        </div>
+        <div id="container-buttons">
+            <button class="btn btn-outline-dark" (click)="SingUp($event)">SignUp</button>
+            <button class="btn btn-dark" ><a routerLink="/ecommerce/login">Cancel</a></button>
+        </div>
+    </div>
+</div>

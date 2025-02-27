@@ -1,0 +1,28 @@
+<div class="container mt-4">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+        <div class="col h-100">
+            <div class="card product-card h-100">
+                @if (product.count<=0) {
+                    <div class="ribbon">Agotado</div>
+                }
+                <img src="https://res.cloudinary.com/dybshhtw1/image/upload/v1740285189/sin-fotografia_imq2to.png" class="card-img-top product-image" alt="Producto">
+                <div class="card-body">
+                    <h5>{{product.name}}</h5>
+                    <p class="product-title">{{product.description}}</p>
+                    <small class="product-price">${{product.price.toFixed(3)}} COP</small>
+                    <div class="mt-auto">
+                        @if (isAdmin) {
+                            <button class="btn btn-primary w-100 my-1" [routerLink]="['/ecommerce/home/update-product', product.id]">
+                                <i class="bi bi-pencil-square"></i> Actualizar
+                            </button>
+                            <button class="btn btn-danger w-100 my-1" (click)="deleteProduct(product.id)" >
+                                <i class="bi bi-trash"></i> Eliminar
+                            </button>
+                        }
+                        <button class="btn buy-button" [disabled]="product.count<=0" (click)="addProductToCar(product)">agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

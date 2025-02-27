@@ -1,0 +1,24 @@
+
+@if (isAdmin) {
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top nav-bar">
+        <div class="search"><app-search-bar (search)="onSearch($event)"></app-search-bar></div>
+        <div class="container-buttons">
+            <button class="btn btn-light" (click)="changeToAudit()">Audit</button>
+            <button class="btn btn-light" (click)="changeAllProducts()">Home</button>
+            <button class="btn btn-light" routerLink="/ecommerce/home/create-product">Crear producto</button>
+            <button class="btn btn-light" (click)="changeToProductsSold()">Productos mas vendidos</button>
+        </div>
+    </nav>
+}@else {
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top nav-bar">
+        <div class="search"><app-search-bar (search)="onSearch($event)"></app-search-bar></div>
+        <div class="container-buttons">
+            <button class="btn btn-light" (click)="changeAllProducts()">Home</button>
+            <button class="btn btn-light" (click)="changeToProductsSold()">Productos mas vendidos</button>
+        </div>
+    </nav>
+}
+
+<div class="container mt-5">
+    <router-outlet></router-outlet>
+</div>

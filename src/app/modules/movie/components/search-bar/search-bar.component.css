@@ -1,0 +1,13 @@
+.search-container {
+    height: 200px;
+    text-align: center;
+    align-content: center;
+}
+.search-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.search-container .input-group {
+    max-width: 500px;
+    margin: 0 auto;
+}

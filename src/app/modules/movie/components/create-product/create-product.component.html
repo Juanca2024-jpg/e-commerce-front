@@ -1,0 +1,46 @@
+<div class="contenedor">
+    <div>
+        <div class="form-control control-contenedor">
+            <div class="centrar">
+                <h1>Crear Producto</h1>
+            </div>
+            <div class="margen">
+                <div>
+                    <label for="">Nombre del producto</label>
+                    <input type="text" class="form-control" [(ngModel)]="createProduct.name" >
+                    <div class="alert alert-danger" [hidden]="!nameAlert">
+                        este campo es obligatorio
+                    </div>
+                </div>
+                <div>
+                    <label for="">Descripcion</label>
+                    <textarea class="form-control" name="" id="" [(ngModel)]="createProduct.description"></textarea>
+                    <div class="alert alert-danger" [hidden]="!descriptionAlert">
+                        este campo es obligatorio
+                    </div>
+                </div>
+                <div>
+                    <label for="">Precio</label>
+                    <input type="number" class="form-control" [(ngModel)]="createProduct.price" >
+                    <div class="alert alert-danger" [hidden]="!priceAlert">
+                        este campo no puede esta en cero o menor
+                    </div>
+                </div>
+                <div>
+                    <label for="">Cantidad</label>
+                    <input type="number" class="form-control" [(ngModel)]="createProduct.count" >
+                    <div class="alert alert-danger" [hidden]="!countAlert">
+                        este campo no puede estar en cero o menor
+                    </div>
+                </div>
+            
+                <div class="centrar">
+                    <div class="contenedor-elementos tamanio">
+                        <button class="btn btn-light btn-outline-dark btn-lg" (click)="addBusiness()">Create</button>
+                        <button class="btn btn-light btn-outline-dark btn-lg" routerLink="/home/list-business">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

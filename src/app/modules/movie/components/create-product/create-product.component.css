@@ -1,0 +1,37 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 65px;
+}
+.control-contenedor{
+    width: 549px;
+}
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.margen div{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.contenedor-elementos{
+    display:flex;
+    justify-content: space-between;
+
+}
+.botones{
+    border-style: none;
+    background-color: transparent;
+}
+.contenedor-inputs{
+    display: flex;
+    justify-content: space-between;
+}
+.divs-contenedor{
+    width: 150px;
+}
+.tamanio{
+    width: 300px;
+}

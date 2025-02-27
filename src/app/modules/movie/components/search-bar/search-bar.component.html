@@ -1,0 +1,15 @@
+<div class="search-container">
+  <div class="input-group mt-3">
+      <input 
+      type="text" 
+      [formControl]="query" 
+      class="form-control" 
+      placeholder="Buscar productos...">
+      <select class="form-select" id="inputGroupSelect01">
+        <option selected>Escoger...</option>
+        <option value="name">Nombre</option>
+        <option value="description">Descripcion</option>
+        <option value="price">Precio</option>
+      </select>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="container text-center">
+  <div class="row align-items-start card-container">
+    <button class="btn btn-primary floating-button" routerLink="/ecommerce/home/buy-car"><img src="https://res.cloudinary.com/dybshhtw1/image/upload/v1740359324/carros_cjavz5.png" alt=""></button>
+    <div *ngFor="let product of products" class="align-items-stretch col">
+      <app-product-card [product]="product"></app-product-card>
+    </div>
+  </div>
+</div>

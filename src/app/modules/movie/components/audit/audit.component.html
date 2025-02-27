@@ -1,0 +1,40 @@
+<div class="table-container">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8"> <!-- Ajusta el tamaño de la tabla -->
+          <table class="table table-bordered table-hover text-center">
+            <thead class="table-dark">
+              <tr>
+                <th>ID</th>
+                <th>Id Usuario</th>
+                <th>Id Producto</th>
+                <th>Tabla afectada</th>
+                <th>Accion</th>
+                <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (item of audits; track $index) {
+                <tr>
+                    <td>{{item.idAudit}}</td>
+                    <td>{{item.idUser}}</td>
+                    <td>{{item.idProduct}}</td>
+                    <td>{{item.tableAfected}}</td>
+                    <td>{{item.action}}</td>
+                    <td>{{item.date.toLocaleString("es-CO", { 
+                        year: "numeric", 
+                        month: "2-digit", 
+                        day: "2-digit", 
+                        hour: "2-digit", 
+                        minute: "2-digit", 
+                        second: "2-digit"
+                      })}}</td>
+                  </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
